@@ -1,0 +1,321 @@
+/* ESPECIFICAÇÕES PADRÕES */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+}
+
+body::-webkit-scrollbar {
+    width: 8px;               /* Largura da scrollbar */
+  }
+  
+body::-webkit-scrollbar-track {
+    background: #f0fdff;        /* Color do fundo */
+    opacity: 0;
+}
+  
+body::-webkit-scrollbar-thumb {
+    background-color: #6ec2cb;    /* Color do scroll */
+    border-radius: 40px;       /* Arredondamento do scroll */
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("../fonts/RobotoSlab-VariableFont_wght.ttf");
+}
+
+@font-face {
+    font-family: "Info";
+    src: url("../fonts/Montserrat-Light.ttf");
+}
+
+/* ESTRUTURA SUPERIOR */
+
+.header {
+    width: 100%;
+    height: 110vh;
+    display: inline-block;
+    background-color: black;
+    background-image: url("../images/wallpaper.jpg");
+    opacity: 1;
+    position: relative;
+    background-size: 100%;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    margin-bottom: -10px;
+    
+}
+
+.profile {
+    width: 256px;
+    height: 256px;
+    position: relative;
+    background-image: url("../images/jr.png");
+    background-size: cover;
+    margin: 0 auto;
+    margin-top: 15%;
+    border-radius: 140px;
+    border: #6ec2cb solid 2px;
+    cursor: pointer;
+}
+
+.info {
+    width: 100%;
+    height: 5%;
+    margin-top: 5%;
+    text-align: center;
+}
+
+.info h1 {
+    display: inline-block;
+    font-family: "Roboto";
+    font-weight: bold;
+    color: white;
+}
+
+.info h1:nth-of-type(2) {
+    color: #6ec2cb;
+}
+
+/* ESTRUTURA PRINCIPAL */
+
+.division {
+    width: 100%;
+    height: 20px;
+    display: inline-block;
+    background-color: #6ec2cb;
+}
+
+.arrow {
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    background-size: cover;
+    margin-left: calc(50% - 24px);
+    margin-top: -5px;
+    background-image: url(../images/arrow.png)
+}
+
+section.section1 {
+    width: 100%;
+    padding-top: 90%;
+    margin: 0 auto;
+    padding: 4% 5%;
+    background-color: white;
+    border-bottom: 5px solid white;
+}
+
+section.section2 {
+    width: 100%;
+    padding-top: 90%;
+    margin: 0 auto;
+    padding: 4% 5%;
+    background-color: #f0fdff;
+    border-bottom: 5px solid white;
+}
+
+section.section3 {
+    width: 100%;
+    padding-top: 90%;
+    margin: 0 auto;
+    padding: 4% 5%;
+    background-color: white;
+    border-bottom: 5px solid white;
+}
+
+section.section2 h2, section.section1 h2, section.section3 h2 { /* TÍTULOS DAS SESSÕES */
+    color: #6ec2cb;
+    font-weight: bold;
+    font-family: "Roboto";
+    letter-spacing: 2px;
+    font-size: 26px;
+}
+
+@media screen and (max-width: 550px) { /* Aplicar a resposividade pra versões mobile */
+    .profile {
+        margin-top: 25%;
+    }
+    
+    section.section1, section.section2, section.section3 {
+        padding: 6% 6%;
+    }
+}
+
+.section1 p.article1 {
+    color: #7e7e7e;
+    font-family: "Info";
+    font-weight: bold;
+    margin-top: 15px;
+    font-size: 22px;
+    letter-spacing: 0.5px;
+}
+
+section.section2 {
+    margin: 0 auto;
+}
+
+.hab1,.hab2,.hab3,.hab4,.hab5 {
+    width: 7.5%;
+	padding-top: 7.5%;
+    display: inline-block;
+    margin: 10px;
+    transition: 0.5s;
+}
+
+/* SESSÃO DE MEDIA QUERIE PARA RESPONSIVO */
+
+@media screen and (max-width: 810px) {
+    .section2 {
+        padding-right: 0px;
+    }
+
+    .hab1,.hab2,.hab3,.hab4,.hab5 {
+        width: 64px;
+        height: 64px;
+    }
+}
+
+.hab1 { /* IMAGEM DA HABILIDADE HTML */
+    background-image: url("../images/html.png");
+    background-size: cover;
+    opacity: 0.7;
+}
+
+.hab2 { /* IMAGEM DA HABILIDADE CSS */
+    background-image: url("../images/css.png");
+    background-size: cover;
+    opacity: 0.7;
+}
+
+.hab3 { /* IMAGEM DA HABILIDADE JS */
+    background-image: url("../images/javascript.png");
+    background-size: cover;
+    opacity: 0.7;
+}
+
+.hab4 { /* IMAGEM DA HABILIDADE DS */
+    background-image: url("../images/rd.png");
+    background-size: cover;
+    opacity: 0.7;
+}
+
+.hab5 { /* IMAGEM DA HABILIDADE PYTHON */
+    background-image: url("../images/python.png");
+    background-size: cover;
+    opacity: 0.7;
+}
+
+.hab1:hover,.hab2:hover,.hab3:hover,.hab4:hover,.hab5:hover {
+    opacity: 1;
+    -webkit-transform: scale(0.85);
+    -ms-transform: scale(0.85);
+    transform: scale(0.85);
+}
+
+/* SESSÃO 3 - PROJETOS */
+.section3 .projeto {
+    width: 31.1%;
+	padding-top: calc(33% / 1.6);
+    margin: 10px;
+    display: inline-block;
+}
+
+.pro1 {
+    background-image: url("../images/img1.png");
+    background-size: cover;
+    border: 2px solid #6ec2cb;
+}
+
+.pro2 {
+    background-image: url("../images/img2.png");
+    background-size: cover;
+    border: 2px solid #6ec2cb;
+}
+
+.pro3 {
+    background-image: url("../images/img3.png");
+    background-size: cover;
+    border: 2px solid #6ec2cb;
+}
+
+.section3 h2 {
+    margin-bottom: 25px;
+}
+
+@media screen and (max-width: 1024px) {
+    .section3 .projeto {
+        width: 100%;
+        padding-top: calc(100% / 1.6);
+        margin: 10px;
+        display: inline-block;
+    }
+}
+
+/* SESSÃO - OBJETIVO */
+.section1.last {
+    background-color: #f0fdff;
+}
+
+/* SESSÃO - RODAPÉ */
+
+footer.rodape {
+    width: 100%;
+    height: 225px;
+    background-color: #6ec2cb;
+    margin: 0 auto;
+    margin-top: -4px;
+}
+
+footer.rodape .icons {
+    text-align: center;
+    padding-top: 25px;
+}
+
+footer.rodape .gh {
+    display: inline-block;
+    width: 5%;
+    padding-top: 5%;
+    background-image: url("../images/gh.png");
+    cursor: pointer;
+    background-size: 55%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+footer.rodape .linkedin {
+    display: inline-block;
+    width: 5%;
+    padding-top: 5%;    
+    background-image: url("../images/linkedin.png");
+    cursor: pointer;
+    background-size: 45%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 1280px) {
+    footer.rodape .gh, footer.rodape .linkedin {
+        width: 64px;
+        padding-top: 64px;
+    }
+}
+
+footer.rodape .box {
+    width: 100%;
+    text-align: center;
+}
+
+footer.rodape .line p {
+    color: black;
+    font-weight: bold;
+    font-family: Roboto;
+}
+
+footer.rodape .email {
+    margin-bottom: 15px;
+}
